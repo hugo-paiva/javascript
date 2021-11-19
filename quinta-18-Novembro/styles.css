@@ -1,0 +1,50 @@
+body {
+    background-color: #BCE7FD;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+article {
+    width: 60%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+div#books {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+div#books *{
+    border-radius: 0;
+    padding: 0.5rem;
+    width: 11rem;
+
+}
+
+img {
+    width: 200px;
+    border-radius: 15%;
+    display: block;
+}
+
+h1 {
+    color: #21FA90;
+    flex-grow: 1;
+}
+
+p {
+    color: #424651;
+}
+
+span {
+    color: #e20f6b;
+}
