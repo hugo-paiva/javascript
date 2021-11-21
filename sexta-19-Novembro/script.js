@@ -1,7 +1,7 @@
 let p = document.createElement('p')
 p.innerHTML = 'Bom dia!'
 
-document.querySelector('#conteudo').appendChild(p)
+document.querySelector('#content').appendChild(p)
 
 
 let albumList = [
@@ -17,9 +17,9 @@ let albumList = [
 let amountOfImages = albumList.length 
 
 for (let i = 0; i < amountOfImages; i++) {
-    var img = document.createElement('img')
+    let img = document.createElement('img')
     img.src = albumList.pop()
-    document.querySelector('#conteudo').appendChild(img)
+    document.querySelector('#content').appendChild(img)
     img.style.width = '300px'
     img.style.padding = '1rem'
 }
