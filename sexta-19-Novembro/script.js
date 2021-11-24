@@ -1,7 +1,8 @@
 let p = document.createElement('h1')
-p.innerHTML = 'Led Zeppelin'
+p.innerHTML = 'LED ZEPPELIN'
 
 document.querySelector('#content').appendChild(p)
+p.style.fontWeight = '900'
 
 let albumList = [
     {
@@ -23,6 +24,7 @@ let albumList = [
 
     {
         link: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/led-zeppelin-iv-1555363513.jpg?crop=1xw:1xh;center,top&resize=640:*",
+        
         text: "All it took was the slightest hint of a backlash against III to instigate a resounding musical response. In fact, Led Zeppelin IV may well be the definitive hard rock album of all time. Certainly, it showcases the band's striking diversity as tough favorites like Black Dog and Rock & Roll are balanced by Tolkien-inspired fantasy (The Battle of Evermore), wistful folk (Going to California), reinvented blues (When the Levee Breaks) and the multi-faceted tour de force Stairway to Heaven."
     }
 ]
@@ -33,15 +35,12 @@ for (let i = 0; i < amountOfImages; i++) {
         let p = document.createElement('p')
         let img = document.createElement('img')
 
+        img.src = albumList[i].link
+        document.querySelector('#content').appendChild(img)
+
         p.innerHTML = albumList[i].text
         document.querySelector('#content').appendChild(p)
         p.style.textAlign = 'justify'
-
-        img.src = albumList[i].link
-        document.querySelector('#content').appendChild(img)
-        img.style.width = '300px'
-        img.style.padding = '1rem'
-
 }
 
 
