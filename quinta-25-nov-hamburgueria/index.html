@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapa tá Kenji</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- a. Opções de pão: Pão francês (R$3,00), Pão Australiano (R$8,00), Pão de Brioche
+    (R$6,00);
+    b. Opções de hambúrguer: Hambúrguer de picanha (R$13,00), Hamburguer de costela
+    (R$10,00), Hamburguer Vegano (R$12,00);
+    c. Opções de salada: Alface (R$1,50), Tomate (R$1,50), sem salada (R$0,00);
+    d. Opções de Queijo: Mussarela (R$3,00), Prato (R$3,00), Cheddar (R$5,00);
+    Dica: Utilize formulários, funções e botões. -->
+    <form>
+        <div class="container-bread-options">
+            <p>Fala meus bacanos! Qual tipo de pão vai ser hoje? </p>
+            <label for="frances">Frances</label>
+            <input type="radio" name="bread" class=".bread" id="frances" value="frances">
+            <label for="australiano">Australiano</label>
+            <input type="radio" name="bread" class=".bread" id="australiano" value="australiano">
+            <label for="brioche">Brioche</label>
+            <input type="radio" name="bread" class=".bread" id="brioche" value="brioche">
+        </div>
+        <button type="button" onclick="checkBread();">Clique</button>
+        <div class="container-hamburger-options">
+            <input type="radio" name="meat" id="picanha">
+            <input type="radio" name="meat" id="costela">
+            <input type="radio" name="meat" id="vegano">
+        </div>
+
+        <!-- <div class="container-salada-options"></div>
+        <div class="container-cheese-options"></div> -->
+    </form>
+</body>
+
+</html>
