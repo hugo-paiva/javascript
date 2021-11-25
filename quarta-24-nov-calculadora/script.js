@@ -1,26 +1,26 @@
-const sndOperand = document.querySelector('#second-operand').value
-let result = document.querySelector('p')
-const btn = document.querySelector('.sum')
+let num1 = ''
+let num2 = ''
 
-// function sum() {
-//     result.innerHTML= fstOperand + sndOperand
-//     document.querySelector('body').appendChild(result)
-// }
+function sum(){
+    num1 = Number(document.querySelector('#primeiro').value)
+    num2 = Number(document.querySelector('#segundo').value)
+    document.querySelector('p').innerHTML = num1 + num2
+}
 
-btn.addEventListener('click', function(e) {
-    e.preventDefault()
-    
-    const fstOperand = document.querySelector('#first-operand').value
-    console.log(fstOperand)
-})
-// function minus() {
+function minus(){
+    num1 = Number(document.querySelector('#primeiro').value)
+    num2 = Number(document.querySelector('#segundo').value)
+    document.querySelector('p').innerHTML = num1 - num2
+}
 
-// }
+function times(){
+    num1 = Number(document.querySelector('#primeiro').value)
+    num2 = Number(document.querySelector('#segundo').value)
+    document.querySelector('p').innerHTML = num1 * num2
+}
 
-// function times() {
-
-// }
-
-// function divide() {
-
-// }
+function divide(){
+    num1 = Number(document.querySelector('#primeiro').value)
+    num2 = Number(document.querySelector('#segundo').value)
+    document.querySelector('p').innerHTML = num1 / num2
+}

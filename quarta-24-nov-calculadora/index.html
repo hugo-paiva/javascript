@@ -10,23 +10,23 @@
 </head>
 
 <body>
-    <form action="">
-        <input type="text" name="first-operand" id="first-operand">
-        <div class="operators">
-            <button onclick="sum();" class="sum">+</button>
-            <!-- <button onclick="minus();" class="minus">-</button>
-            <button onclick="times();" class="times">*</button>
-            <button onclick="divide();" class="divide">/</button> -->
-            <!-- <input type="radio" name="operation" id="sum">
-            <input type="radio" name="operation" id="minus">
-            <input type="radio" name="operation" id="times">
-            <input type="radio" name="operation" id="divide"> -->
+
+    <main>
+        <h1>CALCULADORA MINI</h1>
+        <div class="values-container">
+            <input type="text" name="primeiro" id="primeiro" placeholder="Primeiro valor">
+            <input type="text" name="segundo" id="segundo" placeholder="Segundo valor">
         </div>
-        
+        <div class="operations-container">
+            <button onclick="sum()">Somar</button>
+            <button onclick="minus()">Subtrair</button>
+            <button onclick="times()">Multiplicar</button>
+            <button onclick="divide()">Dividir</button>
+        </div>
         <p></p>
-        <input type="text" name="second-operand" id="second-operand">
-        <script src="script.js"></script>
-    </form>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
