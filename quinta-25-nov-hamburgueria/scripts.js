@@ -83,6 +83,7 @@ function sendOrder() {
     let cheese = document.querySelector('.sua-escolha4').innerHTML
 
     document.querySelector('.order').innerHTML = `
+    O preço é R$ ${breadPrice+meatPrice+saladPrice+cheesePrice} </br>
     Meu amigo chapeiro o pedido é: </br>
     Pão ${bread} </br>
     Hamburguer de ${meat} </br>
