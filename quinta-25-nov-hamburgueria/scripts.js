@@ -3,44 +3,60 @@ let meatPrice
 let saladPrice
 let cheesePrice
 
-let breadOption = document.querySelector('name["bread"]:checked')
-let meatOption = document.querySelector('name["meat"]:checked')
-let saladOption = document.querySelector('name["salad"]:checked')
-let cheeseOption = document.querySelector('name["cheese"]:checked')
+let breadChoosen = document.querySelector('name["bread"]:checked')
+let meatChoosen = document.querySelector('name["meat"]:checked')
+let saladChoosen = document.querySelector('name["salad"]:checked')
+let cheeseChoosen = document.querySelector('name["cheese"]:checked')
 
 function sendOrder() {
-    if (breadOption == 'frances') {
+    // for (let i = 0; i < 3; i++) {
+    //     if breadList[i] == breadChoosen {
+                // somethingCool        
+    //     }
+    // }
+    
+    
+    if (breadChoosen == 'frances') {
         breadPrice = 3
-    } else if (breadOption == 'australiano') {
+    } else if (breadChoosen == 'australiano') {
         breadPrice = 8
-    } else if (breadOption == 'brioche')
+    } else if (breadChoosen == 'brioche') {
         breadPrice = 6
+    }
 
-    if (meatOption == 'picanha') {
+    if (meatChoosen == 'picanha') {
         meatPrice = 10
-    } else if (meatOption == 'costela') {
+    } else if (meatChoosen == 'costela') {
         meatPrice = 20
-    } else if (meatOption == 'vegano') {
+    } else if (meatChoosen == 'vegano') {
         meatPrice = 30
     }
 
-    if (saladOption == 'alface') {
-
-    } else if (saladOption == 'tomate') {
-
-    } else if (saladOption == 'sem salada') {
-
+    if (saladChoosen == 'alface') {
+        saladPrice = 5
+    } else if (saladChoosen == 'tomate') {
+        saladPrice = 5
+    } else if (saladChoosen == 'sem salada') {
+        saladPrice = 15
     }
 
 
-    if (cheeseOption == 'mussarela') {
-
-    } else if (cheeseOption == 'prato') {
-
-    } else if (cheeseOption == 'cheddar') {
-
+    if (cheeseChoosen == 'mussarela') {
+        cheesePrice = 9
+    } else if (cheeseChoosen == 'prato') {
+        cheesePrice = 8
+    } else if (cheeseChoosen == 'cheddar') {
+        cheesePrice = 19
     }
 
 
+    document.querySelector('.order').innerHTML = `
+    O preço é R$ ${breadPrice+meatPrice+saladPrice+cheesePrice} </br>
+    Meu amigo chapeiro o pedido é: </br>
+    Pão ${bread} </br>
+    Hamburguer de ${meat} </br>
+    Opção de salada: ${salad} </br>
+    Queijo ${cheese} </br>
+    `
 
 }
