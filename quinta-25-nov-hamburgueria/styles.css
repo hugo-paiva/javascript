@@ -47,3 +47,7 @@ input {
 button {
     display: block;
 }
+
+input[name="bread"]:checked {
+    background-color: black;
+}

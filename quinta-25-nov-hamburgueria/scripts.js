@@ -3,17 +3,17 @@ let meatPrice
 let saladPrice
 let cheesePrice
 
-let breadChoosen = document.querySelector('name["bread"]:checked')
-let meatChoosen = document.querySelector('name["meat"]:checked')
-let saladChoosen = document.querySelector('name["salad"]:checked')
-let cheeseChoosen = document.querySelector('name["cheese"]:checked')
-
 function sendOrder() {
     // for (let i = 0; i < 3; i++) {
     //     if breadList[i] == breadChoosen {
                 // somethingCool        
     //     }
     // }
+    // 
+    let breadChoosen = document.querySelector('input[name="bread"]:checked').value
+    let meatChoosen = document.querySelector('input[name="meat"]:checked').value  
+    let saladChoosen = document.querySelector('input[name="salad"]:checked').value
+    let cheeseChoosen = document.querySelector('[name="cheese"]:checked').value
     
     
     if (breadChoosen == 'frances') {
@@ -53,10 +53,9 @@ function sendOrder() {
     document.querySelector('.order').innerHTML = `
     O preço é R$ ${breadPrice+meatPrice+saladPrice+cheesePrice} </br>
     Meu amigo chapeiro o pedido é: </br>
-    Pão ${bread} </br>
-    Hamburguer de ${meat} </br>
-    Opção de salada: ${salad} </br>
-    Queijo ${cheese} </br>
+    Pão ${breadChoosen} ${breadPrice} reais </br>
+    Hamburguer de ${meatChoosen} ${meatPrice} reais </br>
+    Opção de salada: ${saladChoosen} ${saladPrice} reais </br>
+    Queijo ${cheeseChoosen} ${cheesePrice} reais </br>
     `
-
 }
