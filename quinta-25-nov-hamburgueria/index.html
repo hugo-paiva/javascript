@@ -22,45 +22,69 @@
         <div class="container-bread-options">
             <p>Qual tipo de pão vai ser hoje? </p>
             
-            <label for="frances">Frances</label>
-            <input type="radio" name="bread" class=".bread" id="frances" value="frances">
-            <label for="australiano">Australiano</label>
-            <input type="radio" name="bread" class=".bread" id="australiano" value="australiano">
-            <label for="brioche">Brioche</label>
-            <input type="radio" name="bread" class=".bread" id="brioche" value="brioche">
+            <div>
+                <label for="frances">Frances</label>
+                <input type="radio" name="bread" class=".bread" id="frances" value="frances" breadPrice="3" checked>
+            </div>
+            <div>
+                <label for="australiano">Australiano</label>
+                <input type="radio" name="bread" class=".bread" id="australiano" value="australiano" breadPrice="8">
+            </div>
+            <div>
+                <label for="brioche">Brioche</label>
+                <input type="radio" name="bread" class=".bread" id="brioche" value="brioche" breadPrice="8">
+            </div>
         </div>
 
 <!-- Pick your meat option -->
-        <p>Escolha sua opção de hamburguer:</p>
         <div class="container-hamburger-options">
-            <label for="picanha">Picanha</label>
-            <input type="radio" name="meat" id="picanha" value="picanha">
-            <label for="costela">Costela</label>
-            <input type="radio" name="meat" id="costela" value="costela">
-            <label for="vegano">Vegano</label>
-            <input type="radio" name="meat" id="vegano" value="vegano">
+        <p>Escolha sua opção de hamburguer:</p>
+            <div>
+                <label for="picanha">Picanha</label>
+                <input type="radio" name="meat" id="picanha" value="picanha"checked>
+            </div>
+            <div>
+                <label for="costela">Costela</label>
+                <input type="radio" name="meat" id="costela" value="costela">
+            </div>
+            <div>
+                <label for="vegano">Vegano</label>
+                <input type="radio" name="meat" id="vegano" value="vegano">
+            </div>
         </div>
 
-        <p>Escolha sua opção de salada:</p>
 <!-- Pick salad option -->
         <div class="container-salad-options">
-            <label for="alface">Alface</label>
-            <input type="radio" name="salad" id="alface" value="alface">
-            <label for="tomate">Tomate</label>
-            <input type="radio" name="salad" id="tomate" value="tomate">
-            <label for="sem-salada">Sem salada</label>
-            <input type="radio" name="salad" id="sem-salada" value="sem salada">
+        <p>Escolha sua opção de salada:</p>
+            <div>
+                <label for="alface">Alface</label>
+                <input type="radio" name="salad" id="alface" value="alface" checked>
+            </div>
+            <div>
+                <label for="tomate">Tomate</label>
+                <input type="radio" name="salad" id="tomate" value="tomate">
+            </div>
+            <div>
+                <label for="sem-salada">Sem salada</label>
+                <input type="radio" name="salad" id="sem-salada" value="sem salada">
+            </div>
         </div>
 
-        <p>Escolha seu queijo preferido:</p>
 <!-- Pick cheese option  -->
         <div class="container-cheese-options">
-            <label for="mussarela">Mussarela</label>
-            <input type="radio" name="cheese" id="mussarela" value="mussarela">
-            <label for="prato">Prato</label>
-            <input type="radio" name="cheese" id="prato" value="prato">
-            <label for="cheddar">Cheddar</label>
-            <input type="radio" name="cheese" id="cheddar" value="cheddar">
+        <p>Escolha seu queijo preferido:</p>
+            <div>
+                <label for="mussarela">Mussarela</label>
+                <input type="radio" name="cheese" id="mussarela" value="mussarela" checked>
+            </div>
+            <div>
+                <label for="prato">Prato</label>
+                <input type="radio" name="cheese" id="prato" value="prato">
+            </div>
+            <div>
+                <label for="cheddar">cheddar</label>
+                <input type="radio" name="cheese" id="cheddar" value="cheddar">
+            </div>
         </div>
         <button type="button" onclick="sendOrder();">Enviar pedido</button>
 

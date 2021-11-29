@@ -25,12 +25,8 @@ img {
     margin: auto;
 }
 
-p.escolha {
-    border-radius: 0.5rem;
-    padding: 1rem;
-    text-align: center;
-    color: white;
-    box-shadow: 2px 2px 5px black;
+div[class] > * {
+    display: block;
 }
 
 p.order {
@@ -46,8 +42,5 @@ input {
 
 button {
     display: block;
-}
-
-input[name="bread"]:checked {
-    background-color: black;
+    margin: 1rem;
 }

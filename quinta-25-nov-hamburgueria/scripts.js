@@ -4,6 +4,8 @@ let saladPrice
 let cheesePrice
 
 function sendOrder() {
+    // Ideas for the next try... use loops
+    // breadPrice = document.querySelector('input[breadPrice]:checked').value
     // for (let i = 0; i < 3; i++) {
     //     if breadList[i] == breadChoosen {
                 // somethingCool        
@@ -14,8 +16,7 @@ function sendOrder() {
     let meatChoosen = document.querySelector('input[name="meat"]:checked').value  
     let saladChoosen = document.querySelector('input[name="salad"]:checked').value
     let cheeseChoosen = document.querySelector('[name="cheese"]:checked').value
-    
-    
+
     if (breadChoosen == 'frances') {
         breadPrice = 3
     } else if (breadChoosen == 'australiano') {
@@ -25,37 +26,35 @@ function sendOrder() {
     }
 
     if (meatChoosen == 'picanha') {
-        meatPrice = 10
+        meatPrice = 13
     } else if (meatChoosen == 'costela') {
-        meatPrice = 20
+        meatPrice = 10
     } else if (meatChoosen == 'vegano') {
-        meatPrice = 30
+        meatPrice = 12
     }
 
     if (saladChoosen == 'alface') {
-        saladPrice = 5
+        saladPrice = 1.5
     } else if (saladChoosen == 'tomate') {
-        saladPrice = 5
+        saladPrice = 1.5
     } else if (saladChoosen == 'sem salada') {
-        saladPrice = 15
+        saladPrice = 0
     }
-
 
     if (cheeseChoosen == 'mussarela') {
-        cheesePrice = 9
+        cheesePrice = 3
     } else if (cheeseChoosen == 'prato') {
-        cheesePrice = 8
+        cheesePrice = 3
     } else if (cheeseChoosen == 'cheddar') {
-        cheesePrice = 19
+        cheesePrice = 5
     }
-
 
     document.querySelector('.order').innerHTML = `
     O preço é R$ ${breadPrice+meatPrice+saladPrice+cheesePrice} </br>
     Meu amigo chapeiro o pedido é: </br>
-    Pão ${breadChoosen} ${breadPrice} reais </br>
-    Hamburguer de ${meatChoosen} ${meatPrice} reais </br>
-    Opção de salada: ${saladChoosen} ${saladPrice} reais </br>
-    Queijo ${cheeseChoosen} ${cheesePrice} reais </br>
+    Pão ${breadChoosen} -- ${breadPrice} reais </br>
+    Hamburguer de ${meatChoosen} -- ${meatPrice} reais </br>
+    Opção de salada: ${saladChoosen} -- ${saladPrice} reais </br>
+    Queijo ${cheeseChoosen} -- ${cheesePrice} reais </br>
     `
 }
