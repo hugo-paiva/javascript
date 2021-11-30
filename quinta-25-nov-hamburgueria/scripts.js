@@ -12,7 +12,9 @@ function sendOrder() {
     //     }
     // }
     // 
-    let breadChoosen = document.querySelector('input[name="bread"]:checked').value
+    let breadChoosen = document.querySelector('input[name="bread"]:checked').value;
+    let breadPrice = document.querySelector('input[name="bread"]:checked').dataset.breadprice;
+    console.log(typeof(breadPrice));
     let meatChoosen = document.querySelector('input[name="meat"]:checked').value  
     let saladChoosen = document.querySelector('input[name="salad"]:checked').value
     let cheeseChoosen = document.querySelector('[name="cheese"]:checked').value

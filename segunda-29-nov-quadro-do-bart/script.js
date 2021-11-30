@@ -1,19 +1,26 @@
 let p = document.querySelector('p')
 
-function startWriting() {
-    clearWriting()
-    let count = 1
-    let timesWriting = document.querySelector('input').value
-    while (count <= timesWriting) {
-        // document.querySelector('#blackboard').appendChild(p)
-        if ((count-1) % 11 == 0 ) {
-            clearWriting()
-        }
-        p.innerHTML = p.innerHTML + `bobao ${count}</br> `
-        count++
-    }
-}
-
 function clearWriting() {
     p.innerHTML = ''
+}
+
+function startWriting() {
+    clearWriting()
+    let phrase = document.querySelector('#phrase').value
+    let timesWriting = document.querySelector('input#times').value
+    let count = 1
+    let totalWipes = 0
+    
+    if (phrase == '') {
+        phrase = 'Eu não incentivarei os outros a voarem'
+    }
+    while (count <= timesWriting) {
+        if (count > 1 && (count-1) % 11 == 0 ) {
+            totalWipes++
+            clearWriting()
+        }
+        p.innerHTML = p.innerHTML + `${count}~ ${phrase}</br> `
+        count++
+    }
+    document.querySelector('article').innerHTML = `Esse quadro foi limpo ${totalWipes} vezes.`
 }

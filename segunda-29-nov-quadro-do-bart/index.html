@@ -9,12 +9,17 @@
 </head>
 <body>
     <main id="blackboard">
-        <label for="times">Quantas vezes você quer repetir no quadro? </label>
-        <input type="number" name="times" id="times">
-        <input type="button" value="Escrever" onclick="startWriting();">
-        <input type="button" value="Apagar quadro" onclick="clearWriting();">
-       <p></p> 
+        <header>
+            <label for="phrase">Que frase você quer escrever?</label>
+            <input type="text" name="phrase" id="phrase"></br>
+            <label for="times">Quantas vezes você deseja repetir? </label>
+            <input type="number" name="times" id="times">
+            <input type="button" value="Começar" onclick="startWriting();">
+            <input type="button" value="Apagar quadro" onclick="clearWriting();">
+        </header>
+        <p></p>
     </main> 
+    <article>Status</article>
     <script src="script.js"></script>
 </body>
 </html>
