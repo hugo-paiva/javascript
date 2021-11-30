@@ -1,0 +1,14 @@
+body {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+main {
+    background-color: brown;
+    width: 55rem;
+    height: 30rem;
+    margin: 0 auto;
+}
