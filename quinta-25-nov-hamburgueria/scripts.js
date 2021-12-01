@@ -4,17 +4,9 @@ let saladPrice
 let cheesePrice
 
 function sendOrder() {
-    // Ideas for the next try... use loops
-    // breadPrice = document.querySelector('input[breadPrice]:checked').value
-    // for (let i = 0; i < 3; i++) {
-    //     if breadList[i] == breadChoosen {
-                // somethingCool        
-    //     }
-    // }
-    // 
     let breadChoosen = document.querySelector('input[name="bread"]:checked').value;
-    let breadPrice = document.querySelector('input[name="bread"]:checked').dataset.breadprice;
-    console.log(typeof(breadPrice));
+    // let breadPrice = document.querySelector('input[name="bread"]:checked').dataset.breadprice;
+    // console.log(typeof(breadPrice));
     let meatChoosen = document.querySelector('input[name="meat"]:checked').value  
     let saladChoosen = document.querySelector('input[name="salad"]:checked').value
     let cheeseChoosen = document.querySelector('[name="cheese"]:checked').value

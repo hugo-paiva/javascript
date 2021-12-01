@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GP de Mônaco</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>AQUEÇAM SEUS MOTORES</h1>
+        <article>
+            <div><button type="button" onclick="fastRace()">CORRIDA RÁPIDA</button>
+                <p>10 VOLTAS</p>
+            </div>
+            <div><button type="button" onclick="grandPrix()">GRANDE PRÊMIO</button>
+                <p>70 VOLTAS</p>
+            </div>
+            <div><button type="button" onclick="enduro()">ENDURO</button>
+                <p>160 VOLTAS</p>
+            </div>
+        </article>
+        <h2>CONHEÇA OS COMPETIDORES</h2>
+        <div class="container-racers">
+            <div class="racer">
+                <p>PEDRO</p>
+                <p>Velocidade mínima 150Km/h</p>
+                <p>Velocidade máxima 230Km/h</p>
+                <p>Derrapagem 3%</p>
+                <p id="pedro"></p>
+            </div>
+            <div class="racer">
+                <p>JUCA</p>
+                <p>Velocidade mínima 120Km/h</p>
+                <p>Velocidade máxima 260Km/h</p>
+                <p>Derrapagem 5%</p>
+                <p id="juca"></p>
+            </div>
+            <div class="racer">
+                <p>EDNA</p>
+                <p>Velocidade mínima 180Km/h</p>
+                <p>Velocidade máxima 220Km/h</p>
+                <p>Derrapagem 1%</p>
+                <p id="edna"></p>
+            </div>
+        </div>
+        <div class="result">
+            <h1>O RESULTADO É...</h1>
+            <p id="winner"></p>
+        </div>
+    </main>
+</body>
+</html>

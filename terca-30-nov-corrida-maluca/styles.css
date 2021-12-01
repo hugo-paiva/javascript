@@ -1,0 +1,68 @@
+body {
+    background-image: url(assets/img/background-race.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.897);
+    border-radius: 0.5rem;
+    width: 70%;
+    height: 85%;
+}
+
+article {
+    display: flex;     
+    justify-content: space-around;
+}
+
+button {
+    padding: 1rem;
+    background-color: rgb(180, 22, 22);
+    transition: all ease 0.2s;
+    font-weight: 800;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem;
+    width: 12rem;
+}
+
+button:hover {
+    background-color: rgb(255, 251, 0);
+}
+
+button:active, button:focus {
+    background-color: rgb(23, 185, 23);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.container-racers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.result{
+    background-color: rgb(211, 211, 211);
+}
+
+.racer {
+    background-color: rgb(211, 211, 211);
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+
+.racer p[id] {
+    color: rgb(153, 18, 18);
+}
