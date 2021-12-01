@@ -54,10 +54,11 @@ function fastRace() {
 }
 
 function grandPrix() {
-    // 
+    // Grand Prix 70 laps
     startRace(70)
 }
 
 function enduro() {
+    // Enduro 160 laps
     startRace(160)
 }
