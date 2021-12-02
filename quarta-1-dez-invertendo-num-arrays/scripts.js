@@ -1,26 +1,28 @@
-let array = [0,0,0,0]
+// The chalange is not to use any built-in method to manipulate Strings
+const array = [0,0,0,0]
 let reversedArray = []
-let sorted = []
 
 function start() {
-    let pArray = document.querySelector('#array')
-    array[0] = document.querySelector('#m0').value
-    array[1] = document.querySelector('#m1').value
-    array[2] = document.querySelector('#m2').value
-    array[3] = document.querySelector('#m3').value
+    const pArray = document.querySelector('#array')
+    array[0] = Number(document.querySelector('#m0').value)
+    array[1] = Number(document.querySelector('#m1').value)
+    array[2] = Number(document.querySelector('#m2').value)
+    array[3] = Number(document.querySelector('#m3').value)
     pArray.innerHTML = array
+    console.log(array)
+
 }
 
 function revertOrder() {
     start()
-    let pReversed = document.querySelector('#reversed')
+    const pReversed = document.querySelector('#reversed')
     reversedArray = [array[3], array[2], array[1], array[0]]
     pReversed.innerHTML = reversedArray    
 }
 
 function sortArray() {
     start()
-    let pSorted = document.querySelector('#sorted')
+    const pSorted = document.querySelector('#sorted')
     
     done = false
     while (!done) {
