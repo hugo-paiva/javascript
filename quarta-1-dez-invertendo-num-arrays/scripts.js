@@ -25,7 +25,7 @@ function sortArray() {
     done = false
     while (!done) {
         done = true
-        for (let i = 0; i < array.length; i++) {
+        for (let i = 1; i < array.length; i++) {
             if (array[i-1] > array[i]) {
                 done = false
                 let holder = array[i-1]
