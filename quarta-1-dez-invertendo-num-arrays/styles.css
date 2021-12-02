@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/img/Matrix-Wallpapers-1024x640.jpg);
+    background-size: cover;
+    height: 90vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+main {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 1.5rem;
+}
+
+form {
+    margin-block: 1rem;
+    font-size: 1.6rem;
+}
+
+input, button {
+    width: 15rem;
+    height: 3rem;
+    margin-block: 0.5rem;
+    font-size: 1.6rem;
+}
+
+p {
+    margin: 0;
+    background-color: rgb(209, 209, 209);
+}
