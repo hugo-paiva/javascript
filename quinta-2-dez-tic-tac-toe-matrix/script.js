@@ -39,10 +39,10 @@ function reboot() {
     ]
     
     result.innerHTML = ''
-    for (let i = 1; i <= 3; i++) {
-        for (let j = 1; j <= 3; j++) {
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
             let temp = document.querySelector(`#p${i}${j}`)
-            temp.innerHTML = ''
+            temp.innerHTML = ' '
             
     }
 }
