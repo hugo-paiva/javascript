@@ -9,8 +9,6 @@ function start() {
     array[2] = Number(document.querySelector('#m2').value)
     array[3] = Number(document.querySelector('#m3').value)
     pArray.innerHTML = array
-    console.log(array)
-
 }
 
 function revertOrder() {
