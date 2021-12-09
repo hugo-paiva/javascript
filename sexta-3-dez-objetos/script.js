@@ -1,16 +1,4 @@
-function getCarSpeed(min, max) {
-    // Return random speed between max and min arguments
-    min = Number(min)
-    max = Number(max)
-    return Math.floor(Math.random() * (max - min)) + min
-}
-
-function getRealSpeed(speed, skid) {
-    // Returns real speed after subtracting the percentual skid of the car
-    return speed - ((skid / 100) * speed)
-}
-
-const Competitors = {
+const competitors = {
     popular: {
         max_speed: {min: '180', max: '200'},
         min_speed: {min: '110', max: '130'},
@@ -28,16 +16,28 @@ const Competitors = {
     }
 }
 
+function getCarSpeed(min, max) {
+    // Return random speed between max and min arguments
+    min = Number(min)
+    max = Number(max)
+    return Math.floor(Math.random() * (max - min)) + min
+}
+
+function getRealSpeed(speed, skid) {
+    // Returns real speed after subtracting the percentual skid of the car
+    return speed - ((skid / 100) * speed)
+}
+
 function buildCar() {
     let Model = {}
     let Racer = {}
     let possibilities = Math.random()
     if (possibilities <= 0.6) {
-        Model = Competitors.popular
+        Model = competitors.popular
     } else if (possibilities <= 0.85) {
-        Model = Competitors.sport
+        Model = competitors.sport
     } else {
-        Model = Competitors.supersport
+        Model = competitors.supersport
     }
     Racer.max_speed = getCarSpeed(Model.max_speed.min, Model.max_speed.max)
     Racer.min_speed = getCarSpeed(Model.min_speed.min, Model.min_speed.max)
