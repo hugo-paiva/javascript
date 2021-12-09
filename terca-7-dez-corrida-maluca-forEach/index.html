@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body onload="writeSpecs()">
+    <main>
+        <h1>AQUEÇAM SEUS MOTORES</h1>
+        <article>
+            <div><button type="button" onclick="fastRace()">CORRIDA RÁPIDA</button>
+                <p>10 VOLTAS</p>
+            </div>
+            <div><button type="button" onclick="grandPrix()">GRANDE PRÊMIO</button>
+                <p>70 VOLTAS</p>
+            </div>
+            <div><button type="button" onclick="enduro()">ENDURO</button>
+                <p>160 VOLTAS</p>
+            </div>
+        </article>
+        <h2>CONHEÇA OS COMPETIDORES</h2>
+        <div class="container-racers">
+            <div id="racer-pedro" class="racer">
+                <p>PEDRO</p>
+                <p>LEVEL <span id="pedro-level"></span></p>
+                <p>Velocidade mínima <span class="pedro-min"></span>Km/h</p>
+                <p>Velocidade máxima <span class="pedro-max"></span>Km/h</p>
+                <p>Derrapagem <span class="pedro-skid"></span>%</p>
+                <p>Pontuação <span id="pedro-points"></span></p>
+                <p id="pedro"></p>
+            </div>
+            <div id="racer-juca" class="racer">
+                <p>JUCA</p>
+                <p>LEVEL <span id="juca-level"></span></p>
+                <p>Velocidade mínima <span class="juca-min"></span>Km/h</p>
+                <p>Velocidade máxima <span class="juca-max"></p>
+                <p>Derrapagem <span class="juca-skid"></span>%</p>
+                <p>Pontuação <span id="juca-points"></span></p>
+                <p id="juca"></p>
+            </div>
+            <div id="racer-edna" class="racer">
+                <p>EDNA</p>
+                <p>LEVEL <span id="edna-level"></span></p>
+                <p>Velocidade mínima <span class="edna-min"></span>Km/h</p>
+                <p>Velocidade máxima <span class="edna-max"></span>Km/h</p>
+                <p>Derrapagem <span class="edna-skid"></span>%</p>
+                <p>Pontuação <span id="edna-points"></span></p>
+                <p id="edna"></p>
+            </div>
+        </div>
+        <div class="result">
+            <h1>O RESULTADO É...</h1>
+            <p id="winner"></p>
+        </div>
+    </main>
+</body>
+</html>
