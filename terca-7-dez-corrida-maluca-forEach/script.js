@@ -109,6 +109,7 @@ let ednasCar = buildCar("edna")
 let todayRacers = [pedrosCar, jucasCar, ednasCar]
 
 let count = 0
+let itsPlaying = false
 
 writeSpecs()
 
@@ -196,6 +197,11 @@ function startRace(raceMode) {
         const BACKGROUND = document.querySelector('#racer-pedro')
         const BACKGROUNDjuca = document.querySelector('#racer-juca')
         const BACKGROUNDedna = document.querySelector('#racer-edna')
+        const AUDIO = new Audio("assets/audio/Ayrton Senna - Tema Da Vitoria . Jefferson CD`s Pancadão . Tel . ( 85 ) 8705-5671.mp3")
+        if (!itsPlaying) {
+            AUDIO.play()
+            itsPlaying = true
+        }
         if (car.pilot == "pedro") {
             BACKGROUND.style.backgroundImage = 'url(assets/img/png-transparent-flame-flame-flames-fire.png)'
         }
