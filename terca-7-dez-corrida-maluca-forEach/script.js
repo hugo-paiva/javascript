@@ -45,12 +45,14 @@ function buildCar(pilot) {
     } else {
         Model = COMPETITORS.supersport
     }
+    Racer.pilot = pilot
     Racer.max_speed = getCarSpeed(Model.max_speed.min, Model.max_speed.max)
     Racer.min_speed = getCarSpeed(Model.min_speed.min, Model.min_speed.max)
     Racer.skid = getCarSpeed(Model.skid.min, Model.skid.max)
+    Racer.improved_max_speed = Racer.max_speed 
+    Racer.improved_min_speed = Racer.min_speed
     Racer.points = Model.points
     Racer.level = Model.level
-    Racer.pilot = pilot
     return Racer
 }
 
@@ -67,17 +69,17 @@ function writeSpecs() {
     let jucaMin = document.querySelector('.juca-min')
     let pedroMin = document.querySelector('.pedro-min')
 
-    ednaMin.innerHTML = ednasCar.min_speed.toFixed(2)
-    jucaMin.innerHTML = jucasCar.min_speed.toFixed(2)
-    pedroMin.innerHTML = pedrosCar.min_speed.toFixed(2)
+    ednaMin.innerHTML = ednasCar.improved_min_speed.toFixed(2)
+    jucaMin.innerHTML = jucasCar.improved_min_speed.toFixed(2)
+    pedroMin.innerHTML = pedrosCar.improved_min_speed.toFixed(2)
 
     let ednaMax = document.querySelector('.edna-max')
     let jucaMax = document.querySelector('.juca-max')
     let pedroMax = document.querySelector('.pedro-max')
 
-    ednaMax.innerHTML = ednasCar.max_speed.toFixed(2)
-    jucaMax.innerHTML = jucasCar.max_speed.toFixed(2)
-    pedroMax.innerHTML = pedrosCar.max_speed.toFixed(2)
+    ednaMax.innerHTML = ednasCar.improved_max_speed.toFixed(2)
+    jucaMax.innerHTML = jucasCar.improved_max_speed.toFixed(2)
+    pedroMax.innerHTML = pedrosCar.improved_max_speed.toFixed(2)
 
     let ednaSkid = document.querySelector('.edna-skid')
     let jucaSkid = document.querySelector('.juca-skid')
@@ -124,9 +126,9 @@ function startRace(raceMode) {
     todayRacers.forEach(improve)
 
     for (let i = 0; i < raceMode; i++) {
-        pedrosSpeed = getRealSpeed(getCarSpeed(pedrosCar.min_speed, pedrosCar.max_speed), pedrosCar.skid)
-        jucasSpeed = getRealSpeed(getCarSpeed(jucasCar.min_speed, jucasCar.max_speed), jucasCar.skid)
-        ednasSpeed = getRealSpeed(getCarSpeed(ednasCar.min_speed, ednasCar.max_speed), ednasCar.skid)
+        pedrosSpeed = getRealSpeed(getCarSpeed(pedrosCar.improved_min_speed, pedrosCar.improved_max_speed), pedrosCar.skid) 
+        jucasSpeed = getRealSpeed(getCarSpeed(jucasCar.improved_min_speed, jucasCar.improved_max_speed), jucasCar.skid)
+        ednasSpeed = getRealSpeed(getCarSpeed(ednasCar.improved_min_speed, ednasCar.improved_max_speed), ednasCar.skid)
         if (pedrosSpeed >= jucasSpeed && pedrosSpeed >= ednasSpeed) {
             pedrosLaps++
         } else if (jucasSpeed >= pedrosSpeed && jucasSpeed >= ednasSpeed) {
@@ -183,8 +185,8 @@ function startRace(raceMode) {
     function improve(car) {
         if (car.level < 10) {
             car.level = parseInt(car.points / 450)
-            car.max_speed *= ((car.level / 100) + 1)
-            car.min_speed *= ((car.level / 100) + 1)
+            car.improved_max_speed = car.max_speed * ((car.level / 100) + 1)
+            car.improved_min_speed = car.min_speed * ((car.level / 100) + 1)
         }
         if (car.level == 10) {
             setMaxLevelBackground(car)
