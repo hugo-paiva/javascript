@@ -1,5 +1,6 @@
 const COMPETITORS = {
     popular: {
+        type: 'popular',
         max_speed: { min: '180', max: '200' },
         min_speed: { min: '110', max: '130' },
         skid: { min: '3', max: '4' },
@@ -7,6 +8,7 @@ const COMPETITORS = {
         points: 0
     },
     sport: {
+        type: 'sport',
         max_speed: { min: '195', max: '215' },
         min_speed: { min: '125', max: '145' },
         skid: { min: '2', max: '3' },
@@ -14,6 +16,7 @@ const COMPETITORS = {
         points: 0
     },
     supersport: {
+        type: 'supersport',
         max_speed: { min: '210', max: '230' },
         min_speed: { min: '140', max: '160' },
         skid: { min: '1', max: '1.75' },
@@ -46,6 +49,7 @@ function buildCar(pilot) {
         Model = COMPETITORS.supersport
     }
     Racer.pilot = pilot
+    Racer.type = Model.type
     Racer.max_speed = getCarSpeed(Model.max_speed.min, Model.max_speed.max)
     Racer.min_speed = getCarSpeed(Model.min_speed.min, Model.min_speed.max)
     Racer.skid = getCarSpeed(Model.skid.min, Model.skid.max)
@@ -61,9 +65,9 @@ function writeSpecs() {
     let jucaLevel = document.querySelector('#juca-level')
     let pedroLevel = document.querySelector('#pedro-level')
 
-    ednaLevel.innerHTML = ednasCar.level
-    jucaLevel.innerHTML = jucasCar.level
-    pedroLevel.innerHTML = pedrosCar.level
+    ednaLevel.innerHTML = `${ednasCar.level} </br> Dirige um carro ${ednasCar.type}`
+    jucaLevel.innerHTML = `${jucasCar.level} </br> Dirige um carro ${jucasCar.type}`
+    pedroLevel.innerHTML = `${pedrosCar.level} </br> Dirige um carro ${pedrosCar.type}`
 
     let ednaMin = document.querySelector('.edna-min')
     let jucaMin = document.querySelector('.juca-min')
