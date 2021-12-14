@@ -58,6 +58,7 @@ function buildCar(pilot) {
     Racer.points = Model.points
     Racer.level = Model.level
     return Racer
+    console.log(Model)
 }
 
 function writeSpecs() {
