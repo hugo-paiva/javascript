@@ -1,0 +1,29 @@
+body {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #51A0D5;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    color: white;
+    cursor: pointer;
+    margin: 0.2rem;
+}
+
+input {
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+}
+table, th, td {
+    border: 1px solid black;
+}
