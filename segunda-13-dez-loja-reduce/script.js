@@ -1,3 +1,4 @@
+// Declaring variables
 let daysLate = ''
 let finalPrice = ''
 let taxes
@@ -10,7 +11,7 @@ let notasWithTaxes = {}
 
 function storeReceipts() {
     CLIENT_NAME = document.querySelector('#name').value
-    EXPIRE_DATE = new Date(document.querySelector('#expire-date').value)
+    EXPIRE_DATE = new Date(document.querySelector('#expire-date').value) // return the input date as an object with Date type
     PRICE = Number(document.querySelector('#price').value)
 
     RECEIPT = { CLIENT_NAME, EXPIRE_DATE, PRICE, daysLate, finalPrice }
