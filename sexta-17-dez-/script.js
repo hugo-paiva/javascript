@@ -23,29 +23,27 @@ let PRICE
 let RECEIPT
 let notasWithTaxes = {}
 let filteredList
-let minValue
-let maxValue
-let beginning
-let endDate
 
 function filtrar() {
-    minValue = document.querySelector('#min-value').value
-    maxValue = document.querySelector('#max-value').value
-    beginning = new Date(document.querySelector('#beginning').value)
-    endDate = new Date(document.querySelector('#end-date').value)
-    // let minValue = 40
-    // let maxValue = 130
-    // let beginning = new Date(2020,0,01)
-    // let endDate = new Date(2020,11,1)
+    let minValue = document.querySelector('#min-value').value
+    let maxValue = document.querySelector('#max-value').value
+    let beginning = new Date(document.querySelector('#beginning').value)
+    let endDate = new Date(document.querySelector('#end-date').value)
     console.log(minValue, maxValue, beginning, endDate)
-    filteredList = ALL_MY_RECEIPTS.filter(currentValue => currentValue.PRICE < maxValue)
-    filteredList = filteredList.filter(currentReceipt => currentReceipt.PRICE >= minValue)
-    filteredList = filteredList.filter(function(currentReceipt) {
-        return currentReceipt.EXPIRE_DATE.getTime() > beginning.getTime()
-    })
-    filteredList = filteredList.filter(currentReceipt => currentReceipt.EXPIRE_DATE.getTime() <= endDate.getTime())
+    filteredList = ALL_MY_RECEIPTS
+    if (maxValue != '') {
+        filteredList = filteredList.filter(currentValue => currentValue.PRICE < maxValue)
+    }
+    if (minValue != '') {
+        filteredList = filteredList.filter(currentReceipt => currentReceipt.PRICE >= minValue)
+    }
+    if (!isNaN(beginning.getTime())) {
+        filteredList = filteredList.filter(currentReceipt => currentReceipt.EXPIRE_DATE > beginning)
+    }
+    if (!isNaN(endDate.getTime())) {
+        filteredList = filteredList.filter(currentReceipt => currentReceipt.EXPIRE_DATE <= endDate)
+    }
     buildList(filteredList)
-    // O que fazer agora? remover ALL_MY_RECEIPTS do inicio da atribuição acima e usar um array FILTRADO e passar esse array filtrado para o buildList()
 }
 function storeReceipts() {
     CLIENT_NAME = document.querySelector('#name').value
@@ -53,7 +51,7 @@ function storeReceipts() {
     PRICE = Number(document.querySelector('#price').value)
 
     if (CLIENT_NAME == '' || PRICE == '') {
-        window.alert('Você não preencheu os 3 campos. Por favor tente novamente!')
+        window.alert('Você não preencheu os 3 campos. Por favor, complete e tente novamente!')
         return
     }
     RECEIPT = { CLIENT_NAME, EXPIRE_DATE, PRICE, daysLate, finalPrice }
@@ -72,7 +70,7 @@ function buildList(list) {
                 <td>${item.EXPIRE_DATE.toLocaleDateString('pt-BR')}</td>
                 <td>${item.PRICE}</td>
                 <td>${item.daysLate}</td>
-                <td>${item.finalPrice}</td>
+                <td>${item.finalPrice.toFixed(2)}</td>
             </tr>
             `
     })
@@ -80,7 +78,7 @@ function buildList(list) {
     console.log(list)
     document.querySelector("#sum").innerHTML = list.reduce((acumulator, currentValue) => {
         return acumulator + currentValue.finalPrice
-    }, 0)
+    }, 0).toFixed(2)
 }
 
 function startCalculations() {
