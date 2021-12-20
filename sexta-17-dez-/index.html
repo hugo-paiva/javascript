@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja da Joana com filtros</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="name">SEU NOME:</label>
+        <input type="text" name="name" id="name" placeholder="Digie aqui o seu nome">   
+        <label for="expire-date">DATA DE VENCIMENTO:</label>
+        <input type="date" name="expire-date" id="expire-date">
+        <label for="price">VALOR DA COMPRA:</label>
+        <input type="number" name="price" id="price" placeholder="0.00"> 
+        <button type="button" onclick="storeReceipts()">ARMAZENAR RECIBO</button>
+        <button type="button" onclick="startCalculations()">CALCULAR JUROS</button>
+        <button type="button" class="ordenate" onclick="sortByName()">ORDENAR POR NOME</button>
+        <button type="button" class="ordenate" onclick="sortByDate()">ORDENAR POR DATA</button>
+    </form>
+    <div>
+        <label for="beginning">POR DATA DE INÍCIO</label>
+        <input type="date" name="beginning" id="beginning">
+        <label for="end-date">POR DATA DE FIM</label>
+        <input type="date" name="end-date" id="end-date">
+        <label for="min-value">POR VALOR MINIMO</label>
+        <input type="number" name="min-value" id="min-value">
+        <label for="max-value">POR VALOR MÁXIMO</label>
+        <input type="number" name="max-value" id="max-value">
+        <button id="start-filtering" onclick="filtrar()">FILTRAR</button>
+    </div>
+    <div class="container-receipts">
+        <table id=tbPodio>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Data de vencimento</th>
+                    <th>Valor da compra</th>
+                    <th>Dias de atraso</th>
+                    <th>Preço final com juros</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div> 
+    <p>TOTAL DEVIDO</p>
+    <p id="sum"></p>
+</body>
+</html>
