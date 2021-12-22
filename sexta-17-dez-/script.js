@@ -29,8 +29,9 @@ function filtrar() {
     let maxValue = document.querySelector('#max-value').value
     let beginning = new Date(document.querySelector('#beginning').value)
     let endDate = new Date(document.querySelector('#end-date').value)
-    console.log(minValue, maxValue, beginning, endDate)
+    
     filteredList = ALL_MY_RECEIPTS
+    // after receiving all objects from ALL_MY_RECEIPTS it tests for blank inputs and jump them at the filtering process
     if (maxValue != '') {
         filteredList = filteredList.filter(currentValue => currentValue.PRICE < maxValue)
     }
@@ -47,7 +48,7 @@ function filtrar() {
 }
 function storeReceipts() {
     CLIENT_NAME = document.querySelector('#name').value
-    EXPIRE_DATE = new Date(document.querySelector('#expire-date').value) // return the input date as an object with Date type
+    EXPIRE_DATE = new Date(document.querySelector('#expire-date').value) // return the input date as an object with type Date 
     PRICE = Number(document.querySelector('#price').value)
 
     if (CLIENT_NAME == '' || PRICE == '') {
