@@ -1,0 +1,22 @@
+main {
+    margin-inline: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6rem;
+}
+
+button#greater {
+    font-size: 2.4rem;
+}
+
+h1 {
+    color: white;
+    background-image: url(assets/img/pato.jpg);
+    height: 30rem;
+    padding: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
