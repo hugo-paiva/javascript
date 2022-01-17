@@ -1,5 +1,5 @@
 function factorialByRecursion(_n) {
-    let num = _n
+    let num = parseInt(_n)
     if (num == 1) {
         return num
     }
