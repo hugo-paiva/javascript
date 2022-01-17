@@ -14,4 +14,21 @@ function printMatrix(_matrix) {
     return  printMatrix(mtx)
 }
 
-printMatrix(matrix)
+// printMatrix(matrix)
+
+// Resolução número 2
+
+function runMatrix(_matrix, _i = 0) {
+    let mtx = _matrix
+    let i = _i
+    console.log(mtx[i].shift())
+    if (mtx[i].length < 1){
+        i++ 
+    }
+    if (!mtx[i]) {
+        return
+    }
+    runMatrix(mtx, i)
+}
+let teste = [['manga', 'jaca', 'caramelo'],['creamchesse','frango','presunto']]
+runMatrix(teste)
