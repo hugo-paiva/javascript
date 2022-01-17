@@ -1,11 +1,9 @@
-function maximumDraw() {
-    const allNumbers = []
-    for (let i = 0; i < 10; i++) {
-        allNumbers.push(Math.floor(Math.random() * 100))
-    }
-    console.log(`The entire list is ${allNumbers}.`)
-    console.log(allNumbers)
-    return `O maior valor sorteado foi ${Math.max(...allNumbers)}`
+function concatenate(_vetor1, _vetor2) {
+    const newVector = [..._vetor1,..._vetor2]
+    console.log(newVector)
 }
 
-console.log(maximumDraw())
+const numbers = [1, 3, 7, 8]
+const words = ['sink', 'mother', 'chair']
+
+concatenate(numbers, words)

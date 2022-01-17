@@ -1,8 +1,7 @@
-function concatenate(_vetor1, _vetor2) {
-    console.log([..._vetor1,..._vetor2])
+function multiply(a, b, c, d) {
+    console.log(a * b * c * d)
 }
 
-const numbers = [1,3, 7,8]
-const words = ['sink', 'mother', 'chair']
+const numbers = [3, 3, 8, 3]
 
-concatenate(numbers, words)
+multiply(...numbers)
