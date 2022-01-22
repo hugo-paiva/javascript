@@ -1,0 +1,26 @@
+[
+    {
+        "registration": "11",
+        "name": "Hugo Paiva",
+        "ramal": "9090",
+        "email": "hugosousa76@gmail.com",
+        "section": "7",
+        "birthDate":"15/11/1963"
+    },
+    {
+        "registration": "12",
+        "name": "Malcom Phelps",
+        "ramal": "3070",
+        "email": "malcom@x.com",
+        "section": "8",
+        "birthDate":"17/07/1996"
+    },
+    {
+        "registration": "13",
+        "name": "Jackson Five",
+        "ramal": "2080",
+        "email": "motociclismo@x.com",
+        "section": "9",
+        "birthDate":"04/01/1970"
+    }
+    ]
