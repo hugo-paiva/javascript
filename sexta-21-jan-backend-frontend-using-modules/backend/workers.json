@@ -1,0 +1,50 @@
+[
+  {
+    "registration": "25",
+    "name": "breno paiva",
+    "ramal": "1515",
+    "email": "hugosousa76@gmail.com",
+    "section": "12",
+    "birthdate": "1999-09-19"
+  },
+  {
+    "registration": "13",
+    "name": "Jackson Five",
+    "ramal": "2080",
+    "email": "motociclismo@x.com",
+    "section": "9",
+    "birthdate": "04-02-1970"
+  },
+  {
+    "registration": "140082913",
+    "name": "Daniel Filho",
+    "ramal": "3010",
+    "email": "daniel.filho@gmail.com",
+    "section": "1",
+    "birthdate": "1998-01-04"
+  },
+  {
+    "registration": "12",
+    "name": "Malcom Phelps",
+    "ramal": "3070",
+    "email": "malcom@x.com",
+    "section": "3",
+    "birthdate": "17-07-1996"
+  },
+  {
+    "registration": "11",
+    "name": "Hugo Paiva",
+    "ramal": "9090",
+    "email": "hugosousa@gmail.com",
+    "section": "2",
+    "birthdate": "15-11-1963"
+  },
+  {
+    "registration": "9834728",
+    "name": "Joca Fagundes",
+    "ramal": "2010",
+    "email": "joca.fagundes",
+    "section": "15",
+    "birthdate": "1996-06-07"
+  }
+]
