@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(to left, rgb(19, 155, 209), rgb(16, 204, 88));
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.479);
+    padding: 1rem;
+}
+
+input#primeiro, input#segundo {
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+div.operations-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    flex-grow: 1;
+    height: 2rem;
+    background-color: #E5C2C0;
+    border: 1px solid white;
+    font-size: 1.5rem;
+}
+
+button#equals {
+    background-color: #10cc58;
+}
+
+button#clear-entry {
+    background-color: #ff5246;
+}
+
+button#clear-entry:focus {
+    background-color: #10cc58;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #e5c2c0a1;
+}
+
+button:focus {
+    background-color: #10cc58;
+} 
+
+p {
+    background-color: white;
+    text-align: center;
+    padding: 1rem;
+}
