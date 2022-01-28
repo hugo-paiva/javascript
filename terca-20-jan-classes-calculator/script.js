@@ -56,7 +56,7 @@ const minusButton = document.getElementById('minus')
 const timesButton = document.getElementById('times')
 const divideButton = document.getElementById('divide')
 const equalsButton = document.getElementById('equals')
-const clearButton = document.getElementById('clear-entry')
+const allClearButton = document.getElementById('all-clear')
 const result = document.querySelector('p')
 
 const visor = document.getElementById('visor')
@@ -116,12 +116,12 @@ divideButton.addEventListener('click', () =>  {
 
 equalsButton.addEventListener('click', () => {
     myCalc.setOperand2(Number(cacheVisor))
-    cacheVisor = ''
+    cacheVisor = String(myCalc.getResult())
     visor.innerHTML = cacheVisor
-    result.innerHTML = myCalc.getResult()
 })
 
-clearButton.addEventListener('click', () =>  {
-    result.innerHTML = 'RESULTADO'
+allClearButton.addEventListener('click', () =>  {
     myCalc.clearCalculator()
+    cacheVisor = ''
+    visor.innerHTML = ''
 } )
