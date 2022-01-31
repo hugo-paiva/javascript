@@ -1,7 +1,11 @@
 class Calculator {
-    constructor(operand1, operand2) {
+    constructor(operand1, operand2, _typeOfOperation) {
         this.operand1 = operand1
         this.operand2 = operand2
+        this.typeOfOperation = _typeOfOperation
+        if (this.typeOfOperation) {
+            this.setOperation(this.typeOfOperation)
+        }
     }
 
     setOperand1(_operand1) {
@@ -12,14 +16,15 @@ class Calculator {
         this.operand2 = _operand2
     }
 
-    setOperation(_operation) {
-        if (_operation == 'soma') {
+    setOperation(_typeOfOperation) {
+        this.typeOfOperation = _typeOfOperation
+        if (this.typeOfOperation == 'soma') {
             this.operation = () => this.operand1 + this.operand2
-        } else if (_operation == 'subtracao') {
+        } else if (this.typeOfOperation == 'subtracao') {
             this.operation = () => this.operand1 - this.operand2
-        } else if (_operation == 'divisao') {
+        } else if (this.typeOfOperation == 'divisao') {
             this.operation = () => this.operand1 / this.operand2
-        } else if (_operation == 'multiplicacao') {
+        } else if (this.typeOfOperation == 'multiplicacao') {
             this.operation = () => this.operand1 * this.operand2
         } else {
             throw 'Invalid operator. Try again with a diferent option'
@@ -34,11 +39,10 @@ class Calculator {
         this.operand1 = 0
         this.operand2 = 0
         this.operation = ''
-
     }
 }
 
-let myCalc = new Calculator(3, 8)
-myCalc.clearCalculator()
-myCalc.setOperation('multiplicacao')
+let myCalc = new Calculator(3, 8, 'subtracao')
+// myCalc.clearCalculator()
+// myCalc.setOperation('multiplicacao')
 console.log(myCalc.getResult())
