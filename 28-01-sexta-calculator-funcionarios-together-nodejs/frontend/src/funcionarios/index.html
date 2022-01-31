@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <h1>CADASTRO</h1>
+        <label for="registration">Número de matrícula</label>
+        <input type="text" name="registration" id="registration">
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name">
+        <label for="ramal">Ramal:</label>
+        <input type="number" name="ramal" id="ramal">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <label for="section">Seção:</label>
+        <input type="number" name="section" id="section">
+        <label for="birthdate">Data de nascimento:</label>
+        <input type="date" name="birthdate" id="birthdate">
+        <button type="button" id="send-button">ENVIAR</button>
+    </form>
+    <main>
+        <h1>BUSCAS</h1>
+        <div id="container-buttons">
+            <button type="button" id="ramal-button">MOSTRAR POR RAMAL</button>
+            <label for="birthday-text">ENTRE COM O MÊS DE ANIVERSÁRIO</label>
+            <input type="number" name="birthday-text" id="birthday-text">
+            <button type="button" id="birthdate-button">BUSCAR POR ANIVERSÁRIO</button>
+            <label for="section-text">ENTRE COM A SEÇÃO</label>
+            <input type="number" name="section-text" id="section-text">
+            <button type="button" id="section-button">BUSCAR POR SEÇÃO</button>
+        </div>
+        <table>
+            <thead>
+                <td>REGISTRATION</td>
+                <td>NAME</td>
+                <td>RAMAL</td>
+                <td>EMAIL</td>
+                <td>SECTION</td>
+                <td>BIRTHDATE</td>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
