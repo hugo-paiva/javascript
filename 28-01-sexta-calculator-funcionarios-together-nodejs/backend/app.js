@@ -7,7 +7,7 @@ const birthdayPeopleOfTheMonth = require('./components/birthday-people.js')
 const listWorkersBySection = require('./components/section.js')
 const listOfWorkersByRamal = require('./components/ramal.js')
 const addWorker = require('./components/addWorker.js')
-const Calculator = require('./components/calculator/calculator-class')
+const calculator = require('./components/calculator/calculator-factory-function')
 
 const cors = require('cors')
 
@@ -43,7 +43,8 @@ app.get('/calculate/:operand1/:operation/:operand2', (req, res) => {
     const operand2 = Number(req.params.operand2)
     const operation = req.params.operation
     
-    const myCalc = new Calculator(operand1, operand2, operation)
+    const myCalc = calculator(operand1, operand2)
+    myCalc.setOperation(operation)
     res.send(String(myCalc.getResult()))
 })
 
