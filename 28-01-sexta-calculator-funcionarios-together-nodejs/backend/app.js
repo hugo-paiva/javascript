@@ -7,6 +7,7 @@ const birthdayPeopleOfTheMonth = require('./components/birthday-people.js')
 const listWorkersBySection = require('./components/section.js')
 const listOfWorkersByRamal = require('./components/ramal.js')
 const addWorker = require('./components/addWorker.js')
+const Calculator = require('./components/calculator/calculator-class')
 
 const cors = require('cors')
 
@@ -35,6 +36,15 @@ app.get('/ramal', (req, res) => res.json(listOfWorkersByRamal))
 app.post('/add-worker', (req, res) => {
     const data = req.body
     addWorker(data)
+})
+
+app.get('/calculate/:operand1/:operation/:operand2', (req, res) => {
+    const operand1 = Number(req.params.operand1)
+    const operand2 = Number(req.params.operand2)
+    const operation = req.params.operation
+    
+    const myCalc = new Calculator(operand1, operand2, operation)
+    res.send(String(myCalc.getResult()))
 })
 
 app.listen(PORT, () => console.log(`Backend server listening on port ${PORT}!`))
